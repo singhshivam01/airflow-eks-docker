@@ -24,6 +24,7 @@
             build:
               commands:
                 - echo Build started on `date`
+                - systemctl start docker
                 - docker build -t "airflow:latest" .
                 - docker tag "airflow:latest" "airflow:latest"
                 - echo "Testing..."
